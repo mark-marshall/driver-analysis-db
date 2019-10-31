@@ -66,8 +66,6 @@ with open('dbLaptime.csv') as laps_csv:
             "teammate_fl": formatFL(teammateFL(row[4],row[3],row[1],row[2]))
         })
 
-print(careers)
-
 # populate the database
 for record in records:
     db.data.insert_one({
