@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import csv
 
-connection  = MongoClient("mongodb+srv://mm260:UlChjqXiYBzRkJVb@driver-analysis-1hurl.mongodb.net/production?retryWrites=true")
+connection  = MongoClient(f"mongodb+srv://mm260:UlChjqXiYBzRkJVb@driver-analysis-1hurl.mongodb.net/production?retryWrites=true")
 db = connection.production
 
 records = []
@@ -72,4 +72,3 @@ for record in records:
         "name": record,
         "career": careers[record]
     })
-
