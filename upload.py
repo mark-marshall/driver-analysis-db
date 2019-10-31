@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 import csv
 
-connection  = MongoClient(f"mongodb+srv://mm260:UlChjqXiYBzRkJVb@driver-analysis-1hurl.mongodb.net/production?retryWrites=true")
-db = connection.production
+connection  = MongoClient(f"mongodb+srv://mm260:UlChjqXiYBzRkJVb@driver-analysis-1hurl.mongodb.net/test?retryWrites=true")
+db = connection.test
 
 records = []
 careers = {}
@@ -68,7 +68,7 @@ with open('dbLaptime.csv') as laps_csv:
 
 # populate the database
 for record in records:
-    db.data.insert_one({
+    db.inventory.insert_one({
         "name": record,
         "career": careers[record]
     })
