@@ -1,1 +1,2 @@
-# driver-analysis-db
+# DB Upload
+Upload.py takes a csv and programatically uploads records to a Mongo Database. There is some basic data cleansing involved, namely the removal of 0 laptimes and implausible laptimes such as those under 50 seconds. A degree of redundancy is introduced to the Mongo DB by adding teammate's fastest laps to each individual session such that one-off write speed is sacrificed for the repeat read speed for end-users.
